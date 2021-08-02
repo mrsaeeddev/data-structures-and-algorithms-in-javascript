@@ -37,6 +37,11 @@ class HashMap {
         }
     }
 
+    del(key) {
+        let hashedKey = this.hash(key)
+        this.buckets = this.buckets.filter((bucket) => bucket[0][0]!==this.buckets[hashedKey][0][0])
+    }
+
     printBuckets() {
         for (let i=0;i<this.buckets.length;i++) {
             if (this.buckets[i]!==undefined) {
@@ -52,4 +57,5 @@ myHashMap.set("bk201", "FDSS");
 myHashMap.set("bk301", "FDSS");
 myHashMap.set("bk401", "FBSS");
 myHashMap.get("bk201");
+myHashMap.del("bk201")
 myHashMap.printBuckets();
