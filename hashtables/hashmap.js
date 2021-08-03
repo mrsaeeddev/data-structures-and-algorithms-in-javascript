@@ -9,11 +9,13 @@ class HashMap {
         }
         else {
             for (let i=0;i<this.members.length;i++) {
-                if (this.members[i][0] === key && this.members[i][1] !== value) {
-                    this.members[i][1] = value;
-                }
-                else if (this.members[i][0] !== key && this.members[i][1] !== value) {
+               console.log(this.members[i].length)
+                if (this.members[i][0] !== key) {
                     this.members.push([key, value]);
+                }
+                else {
+                    this.remove(key);
+                    this.members.push([key, value])
                 }
             }
         }
@@ -50,5 +52,6 @@ const myHashMap = new HashMap()
 myHashMap.put(1,2)
 myHashMap.put(1,10)
 myHashMap.put(2,3)
+myHashMap.put(2,0)
 myHashMap.remove(1)
 myHashMap.printMembers()
