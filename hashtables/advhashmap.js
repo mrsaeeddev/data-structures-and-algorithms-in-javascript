@@ -39,7 +39,7 @@ class HashMap {
 
     del(key) {
         let hashedKey = this.hash(key)
-        this.buckets = this.buckets.filter((bucket) => bucket[0][0]!==this.buckets[hashedKey][0][0])
+        this.buckets.splice(hashedKey,1)
     }
 
     printBuckets() {
