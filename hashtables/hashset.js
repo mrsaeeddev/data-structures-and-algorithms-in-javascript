@@ -29,7 +29,7 @@ class HashSet {
 
     remove(key) {
         if (this.keys.indexOf(key)!==-1) {
-            this.keys.pop(key)
+            this.keys = this.keys.filter((filteredKey) => filteredKey !== key )
         }
         return this.keys
     }
@@ -50,10 +50,11 @@ class HashSet {
 
 const myHashSet = new HashSet()
 
+myHashSet.add("islamabad")
+myHashSet.add("multan")
 myHashSet.add("karachi")
-myHashSet.add("karachi")
-myHashSet.remove("karachi")
+myHashSet.remove("multan")
 myHashSet.add(2)
 console.log(myHashSet.contains("karachi"))
-myHashSet.clear()
+// myHashSet.clear()
 myHashSet.printKeys()
