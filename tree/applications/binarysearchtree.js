@@ -23,7 +23,7 @@ class BinarySearchTree {
         }
     }
 
-    insertNode(root, newNode) {
+    insertNode(node, newNode) {
         if (newNode.data < root.data) {
             if (node.left === null) {
                 node.left = newNode

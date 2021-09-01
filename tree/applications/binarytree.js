@@ -23,11 +23,17 @@ class TreeNode {
         return this.descendants[RIGHT]
     }
 
-    set right() {
+    set right(node) {
         this.descendants[RIGHT] = node
         if (node) {
             node.parent = this
         }
     }
-
 }
+
+const myBtree = new TreeNode('City')
+const khi = new TreeNode('Khi')
+const isb = new TreeNode('Isb')
+myBtree.left = khi
+myBtree.right = isb
+console.log(myBtree)
