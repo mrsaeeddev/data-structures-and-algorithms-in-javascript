@@ -8,7 +8,7 @@ class Queue{
     }
 
     dequeue() {
-        this.items.pop();
+        this.items.shift();
     }
 
     size() {
@@ -27,8 +27,10 @@ class Queue{
 }
 
 let myQueue = new Queue();
-myQueue.enqueue('Saeed');
-myQueue.printQueue();
+myQueue.enqueue('Banana');
+myQueue.enqueue('Mango');
+myQueue.enqueue('Kiwi');
 myQueue.dequeue();
+myQueue.printQueue();
 console.log(myQueue.size());
 console.log(myQueue.isEmpty());
