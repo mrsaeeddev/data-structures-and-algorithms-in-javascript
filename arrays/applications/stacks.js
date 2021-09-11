@@ -28,3 +28,9 @@ class Stack {
 
 let myStack = new Stack();
 myStack.push('Banana');
+myStack.push('Mango');
+myStack.push('Kiwi');
+myStack.pop();
+myStack.printStack();
+console.log(myStack.size());
+console.log(myStack.isEmpty());
