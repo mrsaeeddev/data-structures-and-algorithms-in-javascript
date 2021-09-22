@@ -18,8 +18,7 @@ class HashMap {
                     this.members.push([key, value])
                 }
             }
-        }
-     
+        }     
     }
 
     get(key) {
